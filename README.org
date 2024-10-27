@@ -1,0 +1,28 @@
+#+title: k9s-modus-operandi
+
+Simple port of modus-operandi theme for [[https://k9scli.io/][k9s]].
+ - Modus-themes homepage: https://protesilaos.com/emacs/modus-themes
+
+* Usage
+1. Download the theme files and copy them into your k9s skins directory.
+
+*Linux*:
+#+begin_src bash
+OUT="${XDG_CONFIG_HOME:-$HOME/.config}/k9s/skins"
+mkdir -p "$OUT"
+curl -L https://raw.githubusercontent.com/Prikaz98/k9s-modus-operandi/refs/heads/main/modus-operandi.yaml > "$OUT/modus-operandi.yaml"
+#+end_src
+
+*macOS*:
+#+begin_src bash
+OUT="${XDG_CONFIG_HOME:-$HOME/Library/Application Support}/k9s/skins"
+mkdir -p "$OUT"
+curl -L https://raw.githubusercontent.com/Prikaz98/k9s-modus-operandi/refs/heads/main/modus-operandi.yaml > "$OUT/modus-operandi.yaml"
+#+end_src
+
+2. Edit your ~config.yaml~ so that it sets ~k9s.ui.skin~ to a modus-operandi.
+#+begin_src yaml
+k9s:
+  ui:
+    skin: modus-operandi
+#+end_src
